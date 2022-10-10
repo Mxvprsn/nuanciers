@@ -22,7 +22,7 @@
 
     </section>
     
-    <div class="sidebar">
+    <div class="sidebar active">
         <nav>
             <ul>
                 <li><a href="#baniere">Accueil</a></li>
@@ -30,7 +30,6 @@
                 <li><a href="#ateliers">Ateliers</a></li>
                 <li><a href="#temoignageateliers">Temoignage Ateliers</a></li>
                 <li><a href="#service">Réalisations Vidéo</a></li>
-             <!--  <li><a href="#temoignagereal">Temoignage Réalisations</a>   </li>--> 
                 <li><a href="#part">Nos Partenaires</a></li>
                 <li><a href="#Contact">Contact</a></li>
             </ul>
@@ -258,62 +257,6 @@
             </div>
         </div>
     </section>
-
-  <!--  
-    <section class="temoignage" id="temoignagereal">
-        <div class="titre-text2">
-            <p>Temoignage </p>
-            <h1>Que disent nos clients sur nos réalisations ?</h1>
-        </div>
-        <div class="temoignage_nuanciers">
-            <div class="temoignage_simple">
-                <div class="utilisateur">
-                    <img src="/image/u1.jpeg" alt="">
-                    <div class="info_util">
-                        <h4>Maxence Persine</h4>
-                        <small>@maxper</small>
-                        <div class="reseaux_util">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                            <i class="fa-brands fa-linkedin"></i>
-                        </div>
-                    </div>     
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ullam soluta, dignissimos amet necessitatibus id neque possimus at optio facere.</p>
-            </div>
-            <div class="temoignage_simple">
-                <div class="utilisateur">
-                    <img src="/image/u1.jpeg" alt="">
-                    <div class="info_util">
-                        <h4>Maxence Persine</h4>
-                        <small>@maxper</small>
-                        <div class="reseaux_util">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                            <i class="fa-brands fa-linkedin"></i>
-                        </div>
-                    </div>     
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ullam soluta, dignissimos amet necessitatibus id neque possimus at optio facere.</p>
-            </div>
-            <div class="temoignage_simple">
-                <div class="utilisateur">
-                    <img src="/image/u2.jpeg" alt="">
-                    <div class="info_util">
-                        <h4>Maxence Persine</h4>
-                        <small>@maxper</small>
-                        <div class="reseaux_util">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                            <i class="fa-brands fa-linkedin"></i>
-                        </div>
-                    </div>     
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ullam soluta, dignissimos amet necessitatibus id neque possimus at optio facere.</p>
-            </div>
-        </div>
-    </section>
-
     <!-- Fin Réalisations -->
 
     <!-- Débuts Partenaires -->
@@ -402,53 +345,6 @@
         </div>
     </section>
 
-    <script>
-
-document.querySelector('.fa-times').style.display ="none"
-
-const menuBtn = document.querySelector(".btn-menu")
-const Sibebar = document.querySelector(".sidebar")
-
-menuBtn.onclick = function(){
-
-    if(Sibebar.style.right == "-250px"){
-        Sibebar.style.right = "0"
-        document.querySelector('.fa-times').style.display =""
-        document.querySelector('.fa-bars').style.display ="none"
-
-    }else{
-        Sibebar.style.right = "-250px"
-        document.querySelector('.fa-times').style.display ="none"
-        document.querySelector('.fa-bars').style.display =""
-    }
-
-}
-
-const btns = document.querySelectorAll('.btn');
-
-const video = document.querySelector('.video-container video')
-
-const videoContainer = document.querySelector('.video-container')
-
-const close = document.querySelector('.close');
-
-
-btns.forEach(btn=>btn.addEventListener('click', ()=>{
-    video.src=btn.dataset.video
-    videoContainer.classList.add('show');
-    video.volume=0.5;
-    video.play();
-})
-)
-
-
-close.addEventListener('click', ()=>{
-    videoContainer.classList.remove('show');
-    video.pause();
-    video.currentTime=0;
-})
-
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
